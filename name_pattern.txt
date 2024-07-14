@@ -1,0 +1,16 @@
+import java.util.*;
+class name_pattern
+{
+public static void main(String args[])
+{
+ Scanner sc=new Scanner(System.in);
+ string name;
+ int i,len;
+ name=sc.nextLine();
+ for(i=0;i<length(name);i++)
+ {
+  print(name[i]);
+ }
+ 
+}
+}

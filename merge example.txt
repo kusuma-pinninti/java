@@ -1,0 +1,36 @@
+#include <stdio.h>
+void merge_sort(int [],int,int);
+void divide(int [],int,int);
+int size=8;
+int main()
+{
+	int i;
+	printf("Enter the size of the array: ");
+	//scanf("%d",&size);
+	int array[size]={45,12,34,19,20,123,1,0,23};
+	printf("Enter the elements:\n");
+	//for(i=0;i<size;i++)
+	//{
+		//scanf("%d",&array[i]);
+	//}
+
+	divide(array,0,size-1);
+	printf("Array after sorting is :\n");
+	for(i=0;i<size;i++)
+	{
+		printf("%d",array[i]);
+	}
+}
+void divide(int a[],int low,int high)
+{
+	if(low==high)
+	{
+		return;
+	}
+	int mid=(low+high)/2;
+	low=mid+1;
+	high=mid;
+	divide(a,0,high);
+	divide(a,low,size-1);
+	
+}
